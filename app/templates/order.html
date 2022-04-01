@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering</title>
+</head>
+<body>
+    h1>Ordering notice</h1>
+    <p>Dear {{person_name}}</p>
+    <p>you've ordered from {{company}}</p>
+    <ul>
+        {% for item in item_list %}
+        <li> {{item}}</li>
+        {% endfor %}
+    </ul>
+    <p>date:{{ship_date}}</p>
+    {% if ordered_warranty%}
+    <p>your warranty information is {{ordered_warranty}}</p>
+    {% else %}
+    <p>you didn't order a warranty</p>
+    {%endif%}
+    <p>sincerly ,<br/> {{company}}</p>
+</body>
+</html>

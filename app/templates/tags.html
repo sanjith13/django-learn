@@ -1,0 +1,15 @@
+<html>
+    <title>hello</title>
+    <body>
+        {% if key1 or key2 %}
+            Both athletes and coaches are available.
+        {% endif  %}
+        {% if key1 and key2 %}
+           Both athletes and coaches are available.
+        {% elif key1 %}
+           only athletes present.
+        {% else %}
+           notpresent
+        {% endif %}
+    </body>
+</html>

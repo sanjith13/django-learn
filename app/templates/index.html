@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ordering Notice </title>
+</head>
+<body>
+    <form action="/update/" method="POST">
+        {% csrf_token %}
+        first name:<input type="text" name="fname" id="fname">
+        last name:<input type="text" name="nfname" id="lname">
+        email:<input type="email" name="email" id="email">
+        phone:<input type="number" name="phone" id="phone">
+        <button type="submit">submit</button>
+    </form> 
+</body>
+</html>
