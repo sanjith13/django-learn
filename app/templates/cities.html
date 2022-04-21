@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Review</title>
+  </head>
+  <style>
+      h1{
+          text-align: center;
+          color: black;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    .container{
+      display: grid;
+      place-items: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding: 50px;
+      border: 1px solid #333;
+      border-radius: 20px;
+    }
+  </style>
+  <body>
+    <div class="container bg-light">
+    {% if destination %}
+    <div class="container">
+      <h2>{{ destination.dname }}</h2>
+      <img src="{{ destination.dimg }}" alt = "{{ destination.dname}}">
+      <p>rating : {{ destination.rating }}⭐</p>
+      <p>country : {{ destination.country}}</p>
+      <p>{{ destination.dinfo }}</p>
+      <a href="/" class="btn btn-dark">back</a>
+    </div>
+    {% endif %}
+    </div>
+  </body>
+</html>

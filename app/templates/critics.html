@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Critics</title>
+  </head>
+  <style>
+      body{
+        background-image: url("https://image.shutterstock.com/image-illustration/them-wonders-around-world-portrait-600w-1502486546.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      h1{
+          text-align: center;
+          color: aliceblue;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    .form {
+      display: grid;
+      place-items: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding: 50px;
+      border: 1px solid #333;
+      border-radius: 20px;
+    }
+    .container{
+        margin-top: 5%;
+        margin-bottom: auto;
+        border-radius: 20px;
+        width:50%;
+    }
+    .form input {
+      width: 80%;
+      margin-top: 20px;
+      padding: 20px;
+    }
+    .form button{
+        width: 20%;
+        margin-top: 20px;
+    }
+  </style>
+  <body>
+    <div class="container bg-dark">
+      <h1>Add City</h1>
+      <form method="post" action="/critics/" class="form">
+        {% csrf_token %}
+        <input type="text" name="dname" placeholder="enter the location" />
+        <input type="text" name="dimg" placeholder="enter the img url" />
+        <input type="text" name="rating" placeholder="enter the rating" />
+        <input type="text" name="country" placeholder="enter the country" />
+        <button type="submit" class="btn btn-primary">submit</button>
+      </form>
+    </div>
+  </body>
+</html>
