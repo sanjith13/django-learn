@@ -32,7 +32,8 @@ def criticsedit(request):
         dimg = request.POST['dimg']
         rating = request.POST['rating']
         country = request.POST['country']
-        ins = travelform(dname = dname,dimg = dimg,rating = rating,country = country)
+        dinfo = request.POST['dinfo']
+        ins = travelform(dname = dname,dimg = dimg,rating = rating,dinfo=dinfo,country = country,count = 1)
         ins.save()
         print("Data saved successfully")
     return render(request,'critics.html')
